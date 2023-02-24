@@ -1,0 +1,20 @@
+Index: src/main/java/Consola.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/Consola.java b/src/main/java/Consola.java
+new file mode 100644
+--- /dev/null	
++++ b/src/main/java/Consola.java	
+@@ -0,0 +1,9 @@
++public class Consola extends Producto{
++
++    private int idConsola;
++
++    public Consola(String nombreProducto, int stock, String descripcion, double precio) {
++        super(nombreProducto, stock, descripcion, precio);
++    }
++
++}
+\ No newline at end of file
