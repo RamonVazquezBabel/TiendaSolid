@@ -43,9 +43,16 @@ public abstract class Producto {
         this.precio = precio;
     }
 
-    public void actualizarStock(int stock) {
+    public boolean hayStock(Producto p, int cantidadSolicitada){
+        return p.getStock()>=cantidadSolicitada;
+    }
+    public void actualizaStockAlComprar(Producto p,int cantidadSolicitada){
+        if (hayStock(p,cantidadSolicitada)){
+            System.out.println("Se ha realizado la compra del producto "+p.getNombreProducto()+" correctamente");
+            p.setStock(p.getStock() - cantidadSolicitada);
+        }else{
+            System.out.println("No hay stock suficiente para comprar "+cantidadSolicitada+ " unidadel de producto "+p.getNombreProducto());
+        }
 
     }
-
-    public void ventaProducto(Producto p){}
 }
