@@ -1,14 +1,12 @@
 public class Televisor extends Producto{
     private int idTelevisor;
-    private string marca;
 
     public Televisor(){
 
     }
 
-    public Televisor(int idTelevisor, string marca) {
+    public Televisor(int idTelevisor) {
         this.idTelevisor = idTelevisor;
-        this.marca = marca;
     }
 
     public int getIdTelevisor() {
@@ -19,11 +17,4 @@ public class Televisor extends Producto{
         this.idTelevisor = idTelevisor;
     }
 
-    public string getMarca() {
-        return marca;
-    }
-
-    public void setMarca(string marca) {
-        this.marca = marca;
-    }
 }
