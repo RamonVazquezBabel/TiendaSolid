@@ -1,10 +1,10 @@
-public abstract class Catalogo {
+public abstract class Producto {
     protected String nombreProducto;
     protected int stock;
     protected String descripcion;
     protected double precio;
 
-    public Catalogo(String nombreProducto, int stock, String descripcion, double precio) {
+    public Producto(String nombreProducto, int stock, String descripcion, double precio) {
         this.nombreProducto = nombreProducto;
         this.stock = stock;
         this.descripcion = descripcion;
@@ -42,4 +42,10 @@ public abstract class Catalogo {
     public void setPrecio(double precio) {
         this.precio = precio;
     }
+
+    public void actualizarStock(int stock) {
+
+    }
+
+    public void ventaProducto(Producto p){}
 }
