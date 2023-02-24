@@ -1,0 +1,16 @@
+Index: TiendaSolid/Carrito.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/TiendaSolid/Carrito.java b/TiendaSolid/Carrito.java
+new file mode 100644
+--- /dev/null	(date 1677241684428)
++++ b/TiendaSolid/Carrito.java	(date 1677241684428)
+@@ -0,0 +1,5 @@
++public interface Carrito {
++    void agregarProducto(Producto producto);
++    void quitarProducto(Producto producto);
++    double calcularPrecioTotal();
++}
+\ No newline at end of file
