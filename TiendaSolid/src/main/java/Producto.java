@@ -1,62 +1,34 @@
-public abstract class Producto {
-    protected String nombreProducto;
-    protected int stock;
-    protected String descripcion;
-    protected double precio;
+package src.main.java;
+public class Producto {
+    private String nombre;
+    private String descripcion;
+    private double precio;
+    private int cantidad;
 
-    public Producto(String nombreProducto, int stock, String descripcion, double precio) {
-        this.nombreProducto = nombreProducto;
-        this.stock = stock;
+    public Producto(String nombre, double precio) {
+        this.nombre = nombre;
         this.descripcion = descripcion;
         this.precio = precio;
+        this.cantidad = cantidad;
     }
 
-    public String getNombreProducto() {
-        return nombreProducto;
-    }
-
-    public void setNombreProducto(String nombreProducto) {
-        this.nombreProducto = nombreProducto;
-    }
-
-    public int getStock() {
-        return stock;
-    }
-
-    public void setStock(int stock) {
-        this.stock = stock;
+    public String getNombre() {
+        return nombre;
     }
 
     public String getDescripcion() {
         return descripcion;
     }
 
-    public void setDescripcion(String descripcion) {
-        this.descripcion = descripcion;
-    }
-
     public double getPrecio() {
         return precio;
     }
 
-    public void setPrecio(double precio) {
-        this.precio = precio;
+    public int getCantidad() {
+        return cantidad;
     }
 
-    public boolean hayStock(Producto p, int cantidadSolicitada){
-        return p.getStock()>=cantidadSolicitada;
+    public void setCantidad(int cantidad) {
+        this.cantidad = cantidad;
     }
-    public void actualizaStockAlComprar(Producto p,int cantidadSolicitada){
-        if (hayStock(p,cantidadSolicitada)){
-            System.out.println("Se ha realizado la compra del producto "+p.getNombreProducto()+" correctamente");
-            p.setStock(p.getStock() - cantidadSolicitada);
-        }else{
-            System.out.println("No hay stock suficiente para comprar "+cantidadSolicitada+ " unidadel de producto "+p.getNombreProducto());
-        }
-
-    }
-
-    public void ventaProducto(Producto p){}
-
-
 }
