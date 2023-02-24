@@ -55,4 +55,8 @@ public abstract class Producto {
         }
 
     }
+
+    public void ventaProducto(Producto p){}
+
+
 }
