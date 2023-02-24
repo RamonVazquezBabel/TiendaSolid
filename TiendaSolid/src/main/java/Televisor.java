@@ -1,6 +1,6 @@
 public class Televisor extends Producto{
     private int idTelevisor;
-    private string marca;
+    private String marca;
 
     public Televisor(){
 
