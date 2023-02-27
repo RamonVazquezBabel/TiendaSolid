@@ -11,6 +11,10 @@ public class Televisor extends Producto{
         this.idTelevisor = idTelevisor;
     }
 
+    public Televisor(String nombreProducto, int stock, String descripcion, double precio) {
+        super(nombreProducto, stock, descripcion, precio);
+    }
+
     public int getIdTelevisor() {
         return idTelevisor;
     }
