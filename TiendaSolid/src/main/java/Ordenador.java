@@ -1,8 +1,7 @@
-public class Ordenador extends Catalogo{
-    private String marca;
-    public Ordenador(String nombreProducto, int stock, String descripcion, double precio, String marca) {
+public class Ordenador extends Producto{
+
+    public Ordenador(String nombreProducto, int stock, String descripcion, double precio) {
         super(nombreProducto, stock, descripcion, precio);
-        this.marca = marca;
     }
 
 
