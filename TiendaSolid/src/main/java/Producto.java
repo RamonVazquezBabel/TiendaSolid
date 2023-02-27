@@ -59,7 +59,11 @@ public abstract class Producto {
 
     }
 
-    public void ventaProducto(Producto p){}
+    public void ventaProducto(Producto p, int cantidadSolicitada){
+        if(hayStock(p,cantidadSolicitada)){
+            p.actualizaStockAlComprar(p,cantidadSolicitada);
+        }
+    }
 
 
 }
