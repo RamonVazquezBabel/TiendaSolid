@@ -1,9 +1,9 @@
-package src.main.java;
+
 
 public class Movil {
     private int idMovil;
 
-    Public Movil(int idMovil) {
+    public Movil(int idMovil) {
         this.idMovil = idMovil;
     }
 
