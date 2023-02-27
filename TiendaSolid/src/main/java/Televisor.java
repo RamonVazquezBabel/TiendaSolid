@@ -9,7 +9,6 @@ public class Televisor extends Producto{
     public Televisor(int idTelevisor, String marca) {
 
         this.idTelevisor = idTelevisor;
-        this.marca = marca;
     }
 
     public int getIdTelevisor() {
