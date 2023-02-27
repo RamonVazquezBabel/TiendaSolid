@@ -4,6 +4,9 @@ public abstract class Producto {
     protected String descripcion;
     protected double precio;
 
+    public Producto() {
+    }
+
     public Producto(String nombreProducto, int stock, String descripcion, double precio) {
         this.nombreProducto = nombreProducto;
         this.stock = stock;
@@ -56,7 +59,11 @@ public abstract class Producto {
 
     }
 
-    public void ventaProducto(Producto p){}
+    public void ventaProducto(Producto p, int cantidadSolicitada){
+        if(hayStock(p,cantidadSolicitada)){
+            p.actualizaStockAlComprar(p,cantidadSolicitada);
+        }
+    }
 
 
 }
