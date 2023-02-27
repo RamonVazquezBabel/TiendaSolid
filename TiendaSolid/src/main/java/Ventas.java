@@ -1,21 +1,22 @@
-package src.main.java;
 
 import java.util.List;
 
-public class Venta {
-    private Cliente cliente;
+public class Ventas{
     private List<Producto> productos;
 
-    public Venta(Cliente cliente, List<Producto> productos) {
-        this.cliente = cliente;
+    public Ventas(List<Producto> productos) {
         this.productos = productos;
-    }
-
-    public Cliente getCliente() {
-        return cliente;
     }
 
     public List<Producto> getProductos() {
         return productos;
+    }
+
+    public void compra(Producto producto, int cantidadSolicitada) {
+        producto.hayStock(producto,cantidadSolicitada);
+    }
+
+    public void reporteVenta(List<Producto> ventas){
+
     }
 }

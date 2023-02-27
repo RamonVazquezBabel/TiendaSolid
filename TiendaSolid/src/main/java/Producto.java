@@ -1,3 +1,5 @@
+import java.util.NoSuchElementException;
+
 public abstract class Producto {
     protected String nombreProducto;
     protected int stock;
@@ -60,8 +62,12 @@ public abstract class Producto {
     }
 
     public void ventaProducto(Producto p, int cantidadSolicitada){
-        if(hayStock(p,cantidadSolicitada)){
-            p.actualizaStockAlComprar(p,cantidadSolicitada);
+        try {
+            if (hayStock(p, cantidadSolicitada)) {
+                p.actualizaStockAlComprar(p, cantidadSolicitada);
+            }
+        }catch (NoSuchElementException e){
+            System.out.println("No hay stock suficiente del producto "+p.getNombreProducto());
         }
     }
 

@@ -1,11 +1,11 @@
-package src.main.java;
+
 
 import java.util.List;
 
 public class ReporteVentas {
-    private List<Venta> ventas;
+    private List<Ventas> ventas;
 
-    public ReporteVentas(List<Venta> ventas) {
+    public ReporteVentas(List<Ventas> ventas) {
         this.ventas = ventas;
     }
 
@@ -17,7 +17,7 @@ public class ReporteVentas {
         return ventas.stream().mapToDouble(this::calcularMontoVenta).sum();
     }
 
-    private double calcularMontoVenta(Venta venta) {
+    private double calcularMontoVenta(Ventas venta) {
         return venta.getProductos().stream().mapToDouble(Producto::getPrecio).sum();
     }
 }
