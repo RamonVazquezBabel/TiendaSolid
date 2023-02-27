@@ -1,0 +1,17 @@
+Index: src/main/java/Consola.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/Consola.java b/src/main/java/Consola.java
+new file mode 100644
+--- /dev/null	(date 1677242061295)
++++ b/src/main/java/Consola.java	(date 1677242061295)
+@@ -0,0 +1,6 @@
++public class Consola extends Catalogo{
++
++    public void Consola() {
++
++    }
++}
+\ No newline at end of file
